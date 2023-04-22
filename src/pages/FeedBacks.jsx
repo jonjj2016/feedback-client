@@ -15,13 +15,14 @@ const FeedBacks = () => {
     error,
     refetch,
   } = useFind(constants.FEEDBACKS, { query: { isDeleted: false } })
+  console.log('🚀 ~ file: FeedBacks.jsx:18 ~ FeedBacks ~ data:', data)
   const { patch } = useMutation(constants.FEEDBACKS)
 
   const [elements, setElements] = useState([])
   const rows = elements.map((element) => (
     <tr style={{ cursor: 'pointer' }} key={element._id}>
-      <td>{element.title}</td>
-      <td>{element.teaser}</td>
+      <td>{element.instructorId}</td>
+      <td>{element.student}</td>
       <td>{element.text}</td>
       <td>{element.isActive ? 'yes' : 'No'}</td>
       <td>
@@ -62,8 +63,8 @@ const FeedBacks = () => {
       <Table highlightOnHover striped>
         <thead>
           <tr>
-            <th key={7}>Title</th>
-            <th key={6}>Teaser</th>
+            <th key={7}>instructorId</th>
+            <th key={6}>Student</th>
             <th key={5}>Text</th>
             <th key={3}>Active</th>
             <th key={2}>Edit</th>

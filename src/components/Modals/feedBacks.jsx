@@ -1,6 +1,6 @@
 import { Modal } from '@mantine/core'
 import { FormWrapper } from '@components/Froms'
-import { useMutation, useGet } from 'figbird'
+import { useMutation, useGet, useFind } from 'figbird'
 import constants from 'src/Constants/index'
 import useModalNavigate from 'src/Hooks/useModalRouter'
 import { useSelector } from 'react-redux'
@@ -12,6 +12,7 @@ const FeedBackModal = ({ initFields, ...props }) => {
   const { create, patch, error: mutationError } = useMutation(
     constants.FEEDBACKS,
   )
+  const { data: students } = useFind(constants.STUDENTS)
   const { data } = useGet(constants.FEEDBACKS, state.updateId)
 
   const { userId } = useSelector((state) => state.global)
@@ -30,7 +31,9 @@ const FeedBackModal = ({ initFields, ...props }) => {
 
   const onSubmit = async (data) => {
     if (!state.updateId) {
-      await create({ ...data, createdBy: userId })
+      // temporary sol
+      const student = students[0]
+      await create({ ...data, instructorId: userId, student })
     } else {
       await patch(state.updateId, data, { new: true })
     }
