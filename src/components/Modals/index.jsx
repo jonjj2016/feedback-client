@@ -1,0 +1,7 @@
+export { default as Curricula } from './curricula'
+export { default as Students } from './students'
+export { default as Lectures } from './lectures'
+export { default as Groups } from './groups'
+export { default as FeedBacks } from './feedBacks'
+export { default as RootModal } from './Main'
+export { default as ModalWrapper } from './ModalWrapper'
