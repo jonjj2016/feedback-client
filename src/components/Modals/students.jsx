@@ -1,8 +1,8 @@
 import { Modal } from '@mantine/core'
 import { FormWrapper } from '@components/Froms'
 import { useMutation, useGet } from 'figbird'
-import constants from '@constants/index'
-import useModalNavigate from '@hooks/useModalRouter'
+import constants from 'src/Constants/index'
+import useModalNavigate from 'src/Hooks/useModalRouter'
 import { useSelector } from 'react-redux'
 import { useState, useEffect } from 'react'
 

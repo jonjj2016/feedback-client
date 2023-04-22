@@ -1,5 +1,5 @@
 import Input from '@components/Base/UI/Input'
-import useModalNavigate from '@hooks/useModalRouter'
+import useModalNavigate from 'src/Hooks/useModalRouter'
 import { useForm } from 'react-hook-form'
 
 const Lectures = ({ fields, onSubmit, onDelete }) => {

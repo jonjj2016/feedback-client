@@ -1,6 +1,6 @@
-import useModalNavigate from '@hooks/useModalRouter'
+import useModalNavigate from 'src/Hooks/useModalRouter'
 import { useEffect, useState } from 'react'
-import constants from '@constants/index'
+import constants from 'src/Constants/index'
 import { Button, ActionIcon, Table } from '@mantine/core'
 import { useMutation, useFind } from 'figbird'
 
@@ -16,9 +16,9 @@ const Students = () => {
   const [elements, setElements] = useState([])
   const rows = elements.map((element) => (
     <tr style={{ cursor: 'pointer' }} key={element._id}>
-      <td>{element.title}</td>
-      <td>{element.teaser}</td>
-      <td>{element.text}</td>
+      <td>{element.fName}</td>
+      <td>{element.lName}</td>
+      <td>{element.dob}</td>
       <td>{element.isActive ? 'yes' : 'No'}</td>
       <td>
         <ActionIcon
@@ -58,9 +58,9 @@ const Students = () => {
       <Table highlightOnHover striped>
         <thead>
           <tr>
-            <th key={7}>Title</th>
-            <th key={6}>Teaser</th>
-            <th key={5}>Text</th>
+            <th key={7}>First Name</th>
+            <th key={6}>Last Name</th>
+            <th key={5}>dob</th>
             <th key={3}>Active</th>
             <th key={2}>Edit</th>
           </tr>

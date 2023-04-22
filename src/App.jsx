@@ -11,7 +11,7 @@ import {
   Lectures,
   Students,
   FeedBacks,
-} from '@pages/index'
+} from 'src/Pages/index'
 
 import { RootModal } from '@modals/index'
 

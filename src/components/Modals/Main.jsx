@@ -1,8 +1,8 @@
 import { Curricula, Students, Lectures, FeedBacks, Groups } from '.'
 import { useLocation } from 'react-router-dom'
-import useModalNavigate from '@hooks/useModalRouter'
-import Constants from '@constants/index'
-import { initialFields } from '@utils/defaults'
+import useModalNavigate from 'src/Hooks/useModalRouter'
+import Constants from 'src/Constants/index'
+import { initialFields } from 'src/Utils/defaults'
 
 const Main = () => {
   const { close, match } = useModalNavigate()

@@ -18,12 +18,12 @@
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
-      "@pages/*": ["src/pages/*"],
+      "@pages/*": ["src/Pages/*"],
       "@state/*": ["src/State/*"],
       "@modals/*": ["src/components/Modals/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@constants/*": ["src/constants/*"],
-      "@utils/*": ["src/utils/*"]
+      "@hooks/*": ["src/Hooks/*"],
+      "@constants/*": ["src/Constants/*"],
+      "@utils/*": ["src/Utils/*"]
     }
   },
   "include": [

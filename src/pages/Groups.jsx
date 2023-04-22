@@ -1,6 +1,6 @@
-import useModalNavigate from '@hooks/useModalRouter'
+import useModalNavigate from 'src/Hooks/useModalRouter'
 import { useEffect, useState } from 'react'
-import constants from '@constants/index'
+import constants from 'src/Constants/index'
 import { Button, ActionIcon, Table } from '@mantine/core'
 import { useMutation, useFind } from 'figbird'
 
